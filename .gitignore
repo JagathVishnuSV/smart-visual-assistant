@@ -1,0 +1,120 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.manifest
+*.spec
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Model files (large files)
+*.pt
+*.pth
+*.onnx
+*.pb
+*.h5
+*.weights
+*.model
+*.pkl
+*.pickle
+yolov8*.pt
+models/
+checkpoints/
+
+# Data files
+*.csv
+*.json
+*.xml
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+*.avi
+*.mov
+datasets/
+data/
+images/
+videos/
+
+# Logs
+*.log
+logs/
+*.out
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# OS
+Thumbs.db
+desktop.ini
+.Spotlight-V100
+.Trashes
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~.nib
+
+# Cache
+.cache/
+*.cache
+
+# Gradio
+flagged/
+gradio_cached_examples/
+
+# Speech/Audio temporary files
+*.wav
+*.mp3
+temp_audio/
+
+# Camera captures
+camera/captures/
+camera/*.jpg
+camera/*.png
