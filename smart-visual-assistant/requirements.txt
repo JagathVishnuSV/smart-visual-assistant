@@ -1,11 +1,36 @@
-openai
-ultralytics
-opencv-python
-pyttsx3
-whisper
-torch
-sounddevice
-opencv-python
-scipy
-numpy
-gradio
+# Core dependencies
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Vision models (optimized for low-compute)
+ultralytics>=8.0.0  # YOLOv8 for object detection
+easyocr>=1.7.0  # OCR
+pyzbar>=0.1.9  # Barcode/QR detection
+
+# AI/ML
+torch>=2.0.0  # PyTorch (CPU version recommended for low-compute)
+torchvision>=0.15.0
+git+https://github.com/openai/CLIP.git  # CLIP for VQA
+scikit-learn>=1.3.0  # K-means for color detection
+
+# NLP/LLM
+google-generativeai>=0.3.0  # Gemini API
+python-dotenv>=1.0.0  # Environment variables
+
+# Speech
+pyttsx3>=2.90  # Text-to-speech
+openai-whisper>=20231117  # Speech-to-text (using tiny model)
+sounddevice>=0.4.6  # Audio recording
+scipy>=1.11.0  # Audio processing
+
+# GUI
+gradio>=4.0.0  # Web interface
+
+# Optional: For better performance
+# opencv-contrib-python  # Additional OpenCV features
+# onnxruntime  # For ONNX model inference (faster)
+
+# Development
+# pytest
+# black
+# flake8
