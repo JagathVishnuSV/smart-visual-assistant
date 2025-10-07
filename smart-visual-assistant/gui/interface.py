@@ -497,6 +497,7 @@ def create_interface() -> gr.Blocks:
                         )
                         start_btn = gr.Button("▶️ Start Live Stream", variant="primary", size="lg")
                         stop_btn = gr.Button("⏹️ Stop Live Stream", variant="stop", size="lg")
+                        refresh_btn = gr.Button("🔄 Refresh Feed", size="sm")
                         stream_status = gr.Textbox(label="Status", interactive=False)
                     
                     with gr.Column():
@@ -505,8 +506,9 @@ def create_interface() -> gr.Blocks:
                         **How to use:**
                         1. Click "Start Live Stream"
                         2. The system will automatically describe what it sees
-                        3. Scene descriptions are spoken aloud when changes are detected
-                        4. Click "Stop" when done
+                        3. Click "Refresh Feed" to update the video display
+                        4. Scene descriptions are spoken aloud when changes are detected
+                        5. Click "Stop" when done
                         """)
                 
                 start_btn.click(
@@ -520,8 +522,11 @@ def create_interface() -> gr.Blocks:
                     outputs=[stream_status]
                 )
                 
-                # Auto-refresh live video
-                demo.load(fn=get_live_frame, outputs=live_video, every=1)
+                # Manual refresh for live video
+                refresh_btn.click(
+                    fn=get_live_frame,
+                    outputs=[live_video]
+                )
         
         # Help Tab
         with gr.Tab("ℹ️ Help & Tips"):

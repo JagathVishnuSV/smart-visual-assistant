@@ -34,7 +34,7 @@ def get_model():
                 return None
             
             genai.configure(api_key=api_key)
-            _model = genai.GenerativeModel("gemini-2.0-flash-exp")  # Latest fast model
+            _model = genai.GenerativeModel("gemini-2.0-flash")  # Latest fast model
             logger.info("Gemini API initialized successfully")
         except Exception as e:
             logger.error(f"Failed to initialize Gemini: {e}")
